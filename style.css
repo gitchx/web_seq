@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  padding: 30px;
+}
+
+.knobs {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.active {
+  outline: 3px solid black;
+}
