@@ -6,14 +6,31 @@ let inputs = [];
 let step = 0;
 let intervalId;
 
+let bpm = 120;
+
+function getInterval() {
+  return 60000 / bpm / 4;
+}
+
 function midiToFreq(midi) {
   return 440 * Math.pow(2, (midi - 69) / 12);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  inputs = [...document.querySelectorAll("input")];
+  inputs = [...document.querySelectorAll(".step")];
 
   document.getElementById("startBtn").addEventListener("click", startSound);
+
+  document.getElementById("tempo").addEventListener("input", (e) => {
+    bpm = Number(e.target.value);
+
+    document.getElementById("tempoDisplay").textContent = bpm;
+
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = setInterval(sequence, getInterval());
+    }
+  });
 });
 
 function startSound() {
@@ -33,7 +50,7 @@ function startSound() {
   ctx.resume().then(() => {
     osc.start();
 
-    intervalId = setInterval(sequence, 250);
+    intervalId = setInterval(sequence, getInterval());
   });
 }
 

@@ -9,28 +9,42 @@
     <script defer src="index.js"></script>
   </head>
   <body>
-    <button id="startBtn">Start Sound</button>
+    <button id="startBtn">Start Sequence</button>
+
+    <div class="tempoControls">
+      <div class="tempoDisplay">
+        Tempo: <span id="tempoDisplay">120</span> BPM
+      </div>
+      <input
+        class="tempo"
+        id="tempo"
+        type="range"
+        min="60"
+        max="180"
+        value="120"
+      />
+    </div>
 
     <p>Step: <span id="stepDisplay">0</span></p>
 
     <div class="knobs">
-      <input type="range" min="36" max="84" value="60" />
-      <input type="range" min="36" max="84" value="62" />
-      <input type="range" min="36" max="84" value="64" />
-      <input type="range" min="36" max="84" value="67" />
-      <input type="range" min="36" max="84" value="60" />
-      <input type="range" min="36" max="84" value="62" />
-      <input type="range" min="36" max="84" value="64" />
-      <input type="range" min="36" max="84" value="69" />
+      <input class="knob step" type="range" min="36" max="84" value="60" />
+      <input class="knob step" type="range" min="36" max="84" value="62" />
+      <input class="knob step" type="range" min="36" max="84" value="64" />
+      <input class="knob step" type="range" min="36" max="84" value="67" />
+      <input class="knob step" type="range" min="36" max="84" value="60" />
+      <input class="knob step" type="range" min="36" max="84" value="62" />
+      <input class="knob step" type="range" min="36" max="84" value="64" />
+      <input class="knob step" type="range" min="36" max="84" value="69" />
 
-      <input type="range" min="36" max="84" value="60" />
-      <input type="range" min="36" max="84" value="62" />
-      <input type="range" min="36" max="84" value="64" />
-      <input type="range" min="36" max="84" value="67" />
-      <input type="range" min="36" max="84" value="60" />
-      <input type="range" min="36" max="84" value="62" />
-      <input type="range" min="36" max="84" value="64" />
-      <input type="range" min="36" max="84" value="72" />
+      <input class="knob step" type="range" min="36" max="84" value="60" />
+      <input class="knob step" type="range" min="36" max="84" value="62" />
+      <input class="knob step" type="range" min="36" max="84" value="64" />
+      <input class="knob step" type="range" min="36" max="84" value="67" />
+      <input class="knob step" type="range" min="36" max="84" value="60" />
+      <input class="knob step" type="range" min="36" max="84" value="62" />
+      <input class="knob step" type="range" min="36" max="84" value="64" />
+      <input class="knob step" type="range" min="36" max="84" value="72" />
     </div>
   </body>
 </html>
